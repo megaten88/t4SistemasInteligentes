@@ -5,7 +5,6 @@ from sklearn.cluster import KMeans
 from sklearn.cluster import DBSCAN
 
 
-
 def main():
     num = None
     dataSet = None
@@ -20,11 +19,10 @@ def main():
     kmean = KMeans(n_clusters=num)
     kmean.fit(allSet)
     kclusters = DBSCAN(eps=3, min_samples=2).fit(allSet)
-    x,y = allSet[:, 0] , allSet[:, 1]
+    x, y = allSet[:, 0], allSet[:, 1]
     mplt.scatter(x, y, c=kclusters.labels_)
     mplt.show()
 
-    
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()
