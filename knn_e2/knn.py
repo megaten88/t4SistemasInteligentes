@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 import sys
 import matplotlib.pyplot as mplt
 from pandas.core.frame import DataFrame
