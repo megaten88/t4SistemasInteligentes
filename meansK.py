@@ -11,7 +11,7 @@ def main():
     dataSet = None
     try:
         dataSet = sys.argv[1]
-        num = float(sys.argv[2])
+        num = int(sys.argv[2])
     except:
         print("Error at obtaining data: Provide arg1 as dataset and arg2 as clusters")
         sys.exit(1)
