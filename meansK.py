@@ -3,7 +3,6 @@ import sys
 import matplotlib.pyplot as mplt
 import numpyPandas
 from sklearn.cluster import KMeans
-from sklearn.cluster import DBSCAN
 
 
 def main():
