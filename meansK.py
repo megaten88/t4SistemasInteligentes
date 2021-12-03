@@ -19,9 +19,8 @@ def main():
     allSet = numpyPandas.getArray(dataSet)
     kmean = KMeans(n_clusters=num)
     kmean.fit(allSet)
-    kclusters = DBSCAN(eps=3, min_samples=2).fit(allSet)
     x, y = allSet[:, 0], allSet[:, 1]
-    mplt.scatter(x, y, c=kclusters.labels_)
+    mplt.scatter(x, y, c=kmean.labels_)
     mplt.show()
 
 
