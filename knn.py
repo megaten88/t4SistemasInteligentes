@@ -104,11 +104,12 @@ def main():
     # Setting x and y values
     dxtrain, dytrain = (
         dataFrameTraining.iloc[:, :-1],
-        dataFrameTraining[dataFrameTraining.columns - 1],
+        dataFrameTraining[(dataFrameTraining.columns[len(dataFrameTraining.columns)-1])],
     )
+
     dxtest, dytest = (
         dataFrameTesting.iloc[:, :-1],
-        dataFrameTesting[dataFrameTraining.columns - 1],
+        dataFrameTesting[(dataFrameTesting.columns[len(dataFrameTesting.columns)-1])],
     )
 
     # KNN generate training
@@ -121,6 +122,7 @@ def main():
 
     # class report
     report = classification_report(dytest, predict, zero_division=0, digits=4)
+    print(report)
     print(f"Prediction time : {timeend}")
 
 if __name__ == "__main__":
